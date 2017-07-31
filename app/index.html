@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Stopwatch </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  <script src="models/user.js"></script>
+  <script src="models/timer.js"></script>
+  <script src="models/run.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/timer.css">
+</head>
+<body>
+  <form action="">
+    <label for="">User Name</label>
+    <input type="text" name="user[name]"/>
+    <input type="submit" />
+  </form>
+  <nav class="controls">
+    <a id="start"class="button">Start</a>
+    <a id="stop"class="button">Stop</a>
+    <a id="reset"class="button">Reset</a>
+    <a id="results"class="button">Results</a>
+    <div id="stats"></div>
+  </nav>
+    <div class="stopwatch">
+      <p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></p>
+    </div>
+  </div>
+</body>
+</html>

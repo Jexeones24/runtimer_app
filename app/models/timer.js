@@ -1,3 +1,5 @@
+let seconds = 0, minutes = 0, hours = 0;
+
 function createTimer(){
   let id = 0
   return class {
@@ -7,7 +9,15 @@ function createTimer(){
       store.timers.push(this);
       this.start = function(){
         console.log("Started!")
-        // starts timer
+        seconds++;
+        if (seconds >= 60) {
+          seconds = 0;
+          minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+          }
+        }
       }
 
       this.stop = function(){

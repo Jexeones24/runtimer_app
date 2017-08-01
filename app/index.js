@@ -8,12 +8,16 @@ $(function(){
     user = new User(userName);
     console.log(store.users)
     $("#username").val(' ');
+    // how to get to stopwatch.html w/o losing user
   })
 
   $('a#start').bind('click', function(event){
     // define and store startPoint
-    let run = new Run
-    run.start()
+    // let run = new Run
+    // run.start()
+    let hours = $('span#hours')[0].innerText
+    let minutes = $('span#minutes')[0].innerText
+    let seconds = $('span#seconds')[0].innerText
     let timer = new Timer(run.id)
     timer.start()
   })

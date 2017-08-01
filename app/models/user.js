@@ -19,6 +19,9 @@ function createUser(){
     static all(){
       return store.users
     }
+    findOrCreateBy(username){
+
+    }
   }
 }
 

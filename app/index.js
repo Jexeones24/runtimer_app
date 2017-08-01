@@ -1,7 +1,7 @@
 const store = { users: [], timers: [], runs: [] }
+var getTimer;
 
 $(function(){
-
   $('form a').bind('click', function(event){
     event.preventDefault();
     let userName = $("#username").val();
@@ -10,14 +10,16 @@ $(function(){
     $("#username").val(' ');
   })
 
-  $('a#start').unbind('click', function(){
+  $('a#start').bind('click', function(event){
     // define and store startPoint
     let run = new Run
-    let timer = new Timer(run.id) // make available w/o global??
+    run.start()
+    let timer = new Timer(run.id)
     timer.start()
   })
 
-  $('a#stop').on('click', function(){
+  $('a#stop').bind('click', function(timer){
+    // how can i get the timer object here?
     timer.stop()
   })
 

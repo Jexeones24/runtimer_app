@@ -7,6 +7,7 @@ function createTimer(){
       store.timers.push(this);
       this.start = function(){
         console.log("Started!")
+        // starts timer
       }
 
       this.stop = function(){

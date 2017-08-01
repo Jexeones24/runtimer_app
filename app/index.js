@@ -1,16 +1,19 @@
 const store = { users: [], timers: [], runs: [] }
 
 $(function(){
-  // hoursEl = $('p span')[0]
-  // minutesEl = $('p span')[1]
-  // secondsEl = $('p span')[2]
-  // get html elements
-  $('a#start').on('click', function(){
-    // initialize new runEvent
+
+  $('form a').bind('click', function(event){
+    event.preventDefault();
+    let userName = $("#username").val();
+    user = new User(userName);
+    console.log(store.users)
+    $("#username").val(' ');
+  })
+
+  $('a#start').unbind('click', function(){
     // define and store startPoint
-    runEvent = new RunEvent
-    let runId = runEvent.id
-    timer = new Timer(runId) // make available w/o global??
+    let run = new Run
+    let timer = new Timer(run.id) // make available w/o global??
     timer.start()
   })
 

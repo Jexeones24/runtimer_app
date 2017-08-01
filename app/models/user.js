@@ -12,7 +12,12 @@ function createUser(){
       })[0]
     }
     runs(){
-      return store.runs.filter((run) => { return run.userId == this.id });
+      return store.runs.filter((run) => {
+        return run.userId == this.id
+      })
+    }
+    static all(){
+      return store.users
     }
   }
 }

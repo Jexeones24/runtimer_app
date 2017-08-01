@@ -11,7 +11,7 @@ html {
 }
 
 .stopwatch {
-  width: 800px;
+  width: 100%;
   margin: 30px auto;
   color:$white;
   text-align:center;
@@ -20,7 +20,7 @@ html {
 .controls {
   position: fixed;
   text-align: center;
-  top: 1em;
+  top: 10em;
   width: 100%;
 }
 
@@ -59,4 +59,12 @@ html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.form {
+  width: 100%;
+  margin: 30px auto;
+  margin-top: 400px;
+  color:$white;
+  text-align:center;
 }
